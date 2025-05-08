@@ -1,10 +1,9 @@
 cmake_minimum_required(VERSION "3.18.0")
 project(bioinformtics_tools)
 
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 14)
 
-# Find BamTools
-#find_package(BamTools REQUIRED)
+add_definitions(-w)
 
 include_directories("${PROJECT_SOURCE_DIR}/lib")
 include_directories("${PROJECT_SOURCE_DIR}/ext/bamtools/src")
