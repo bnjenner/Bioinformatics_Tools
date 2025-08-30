@@ -16,9 +16,9 @@ int main(int argc, const char **argv) {
 	    	entry += line + '\n';
 	    	if (i % 2 == 1) { 
 	    		if (entry[0] == '>') {
-	    			process_fasta_entry(entry, method);
+	    			modify_fasta_entry(entry, method);
 	    		} else {
-	    			process_fastq_entry(entry, method);
+	    			modify_fastq_entry(entry, method);
 	    		}
 	    		entry = "";
 	    	}
@@ -41,9 +41,9 @@ int main(int argc, const char **argv) {
 		    	entry += line + '\n';
 		    	if (i % 2 == 1) { 
 		    		if (entry[0] == '>') {
-		    			process_fasta_entry(entry, method);
+		    			modify_fasta_entry(entry, method);
 		    		} else {
-		    			process_fastq_entry(entry, method);
+		    			modify_fastq_entry(entry, method);
 		    		}
 		    		entry = "";
 		    	}

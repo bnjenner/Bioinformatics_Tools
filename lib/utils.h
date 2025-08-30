@@ -110,7 +110,7 @@ std::string modify_seq(const std::string &seq, const std::string &method) {
 }
 
 // Process FASTA entries
-void process_fasta_entry(const std::string &entry, const std::string &method) {
+void modify_fasta_entry(const std::string &entry, const std::string &method) {
 	std::string line, seq;
 	std::istringstream stream(entry);
 	while (std::getline(stream, line, '\n')) {
@@ -125,7 +125,7 @@ void process_fasta_entry(const std::string &entry, const std::string &method) {
 }
 
 // Process FASTQ entries
-void process_fastq_entry(const std::string &entry, const std::string &method) {
+void modify_fastq_entry(const std::string &entry, const std::string &method) {
 	int i = 0;
 	std::string line, seq;
 	std::istringstream stream(entry);
