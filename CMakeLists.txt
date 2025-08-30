@@ -15,6 +15,7 @@ add_executable(transcribe src/transcribe.cpp)
 add_executable(translate src/translate.cpp)
 add_executable(bamtofastq src/bamtofastq.cpp)
 add_executable(qdist src/qdist.cpp)
+add_executable(qbycycle src/qbycycle.cpp)
 target_link_libraries(bamtofastq BamTools)
 
 

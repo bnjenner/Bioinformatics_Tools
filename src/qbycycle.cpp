@@ -1,13 +1,24 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
+#include <iomanip>
 #include <utils.h>
 
 
-void count_scores(const std::string &line, std::vector<int> &counts) {
+void sum_scores(const std::string &line, std::vector<int> &sum, std::vector<int> &pos) {
+	
 	int offset = 33;
-	for (const char &q : line) {
-		counts[static_cast<unsigned int>(q) - offset] += 1;
+	int n = sum.size();
+	int length = line.size();
+
+	if (length > n) {
+		sum.resize(line.size(), 0);
+		pos.resize(line.size(), 0);
+	}
+
+	for (int i = 0; i < length; i++) {
+		sum[i] += static_cast<unsigned int>(line[i]) - offset;
+		pos[i] += 1;
 	}
 }
 
@@ -16,14 +27,15 @@ int main(int argc, const char **argv) {
 	int i = 0;
 	
 	std::string entry, line;
-	std::vector<int> phred_counts(61, 0); // Phred scores from 0 to 60
+	std::vector<int> phred_sum; // Sum of phred scores at position
+	std::vector<int> pos_reads; // Reads at positions
 	
 	// If streaming
 	if (argc < 2) {
 
 	    while (std::getline(std::cin, line)) {
 	    	if (i % 4 == 3) {
-	    		count_scores(line, phred_counts);
+	    		sum_scores(line, phred_sum, pos_reads);
         	}
         	i += 1;
         }
@@ -42,7 +54,7 @@ int main(int argc, const char **argv) {
 
 		    while (std::getline(fastq, line)) {
 				if (i % 4 == 3) {
-	    			count_scores(line, phred_counts);
+	    			sum_scores(line, phred_sum, pos_reads);
         		}
 	        	i += 1;
 			}
@@ -56,9 +68,14 @@ int main(int argc, const char **argv) {
 	}
 
 	// Output histogram
-	std::cout << "Score\tFreq\n";
-    for (int i = 1; i < phred_counts.size(); i++) {
-		std::cout << i << "\t" << phred_counts[i] << "\n";
+	float avg;
+	std::cout << "Pos\tScore\n";
+    for (int i = 0; i < phred_sum.size(); i++) {
+    	avg = (float)phred_sum[i] / (float)pos_reads[i];
+		std::cout << i << "\t" 
+				  << std::fixed 
+				  << std::setprecision(2) 
+				  << avg << "\n";
     }
 	
     return 0;
