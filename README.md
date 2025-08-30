@@ -21,4 +21,4 @@ A collection of commandline tools for common bioinformatics tasks written in C++
 **bamtofastq**:     Converts BAM files to FASTQ<br>
 
 ### GTF
-**gtfget**:         Get GTF Features by Coordinates<br>
+**gtfget**:         Get GTF Features by Coordinates (chr:start-stop)<br>
