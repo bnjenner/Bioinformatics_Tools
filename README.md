@@ -5,20 +5,20 @@ A collection of commandline tools for common bioinformatics tasks written in C++
 ## Tools
 
 ### FASTQ/FASTA
-**revcomp**:        Reverse Complements sequences from FASTQ/FASTA files<br>
-**transcribe**:     Transcribes sequences from FASTQ/FASTA files<br>
-**translate**:      Translates sequences from FASTQ/FASTA files<br>
+* **revcomp**:        Reverse Complements sequences from FASTQ/FASTA files<br>
+* **transcribe**:     Transcribes sequences from FASTQ/FASTA files<br>
+* **translate**:      Translates sequences from FASTQ/FASTA files<br>
 
 ### FASTQ
-**fastqtofasta**:   Converts FASTQ files to FASTA<br>
-**qdist**:          Calculates PHRED score distribution from FASTQ<br>
-**qbycycle**        Calculates average PHRED score by position from FASTQ<br>
+* **fastqtofasta**:   Converts FASTQ files to FASTA<br>
+* **qdist**:          Calculates PHRED score distribution from FASTQ<br>
+* **qbycycle**        Calculates average PHRED score by position from FASTQ<br>
 
 ### FASTA
-**flatfasta**:      Flattens multiline fasta files<br>
+* **flatfasta**:      Flattens multiline fasta files<br>
 
 ### BAM
-**bamtofastq**:     Converts BAM files to FASTQ<br>
+* **bamtofastq**:     Converts BAM files to FASTQ<br>
 
 ### GTF
-**gtfget**:         Get GTF Features by Coordinates (chr:start-stop)<br>
+* **gtfget**:         Get GTF Features by Coordinates (chr:start-stop)<br>
