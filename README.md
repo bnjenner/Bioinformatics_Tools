@@ -8,5 +8,6 @@ A collection of commandline tools for common bioinformatics tasks written in C++
 **revcomp**:        Reverse Complements sequences from FASTQ/FASTA files<br>
 **transcribe**:     Transcribes sequences from FASTQ/FASTA files<br>
 **translate**:      Translates sequences from FASTQ/FASTA files<br>
-**qdist**:          Calculates PHRED score distribution<br>
-**qbycycle**        Calculates average PHRED score by position<br>
+**flatfasta**:      Flattens multiline fasta files<br>
+**qdist**:          Calculates PHRED score distribution from FASTQ<br>
+**qbycycle**        Calculates average PHRED score by position from FASTQ<br>

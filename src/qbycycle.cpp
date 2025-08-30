@@ -45,7 +45,7 @@ int main(int argc, const char **argv) {
 
 		std::string input = argv[1];
 		if (input == "-h" || input == "--help") {
-			std::cerr << "Generates histogram of phred scores (offset 33)." << std::endl;
+			std::cerr << "Calculates average Phred score by position (offset 33)." << std::endl;
 			return 0;
 		}
 
