@@ -40,6 +40,15 @@ public:
 		tb = std::vector<std::vector<char>>(n + 1, std::vector<char>(m + 1, ' '));
 	}
 
+	void reset() {
+		score = 0;
+		middle_line = "";
+		aligned_seq1 = "";
+		aligned_seq2 = "";
+		dp = std::vector<std::vector<int>>(n + 1, std::vector<int>(m + 1, 0));
+		tb = std::vector<std::vector<char>>(n + 1, std::vector<char>(m + 1, ' '));
+	}
+
 	int get_score() const { return score; }
 	std::string get_aligned_seq1() const { return aligned_seq1; }
 	std::string get_aligned_seq2() const { return aligned_seq2; }
