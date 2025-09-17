@@ -16,9 +16,11 @@ A collection of commandline tools for common bioinformatics tasks written in C++
 
 ### FASTA
 * **flatfasta**:      Flattens multiline fasta files<br>
+* **nw_align**:       Quick Global Alignment<br>
 
 ### BAM
 * **bamtofastq**:     Converts BAM files to FASTQ<br>
 
 ### GTF
 * **gtfget**:         Get GTF Features by Coordinates (chr:start-stop)<br>
+
