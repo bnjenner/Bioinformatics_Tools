@@ -57,28 +57,6 @@ const std::unordered_map<std::string, char> CODON_MAP = {
 
 void print_help() { std::cerr << "It does what it says it does..." << std::endl; }
 
-// Print Dynamic Programming Matrix
-template <typename T>
-void print_dp_matrix(const std::vector<std::vector<T>> &dp, const std::string &seq1, const std::string &seq2) {
-	std::cerr << "X\tX\t";
-	for (int x = 0; x < seq2.size(); x++) { std::cerr << seq2[x] << "\t"; }
-	std::cerr << "\n";
-	for (int i = 0; i <= seq1.size(); i++) {
-		if (i == 0) {
-			std::cerr << "X\t";
-		} else {
-			std::cerr << seq1[i - 1] << "\t";
-		}
-		for (int j = 0; j <= seq2.size(); j++) {
-			std::cerr << dp[i][j] << "\t";
-		}
-		std::cerr << "\n";
-	}
-}
-template void print_dp_matrix<char>(const std::vector<std::vector<char>> &dp, const std::string &seq1, const std::string &seq2);
-template void print_dp_matrix<int>(const std::vector<std::vector<int>> &dp, const std::string &seq1, const std::string &seq2);
-
-
 // Reverse Complement Sequence
 //		And Complement is gonna be different functions... deal with it.
 std::string revcomp(const std::string &seq) {

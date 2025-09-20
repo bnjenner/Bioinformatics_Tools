@@ -9,10 +9,6 @@
 
 void print_help();
 
-// Print Dynamic Programming Matrix
-template <typename T>
-void print_dp_matrix(const std::vector<std::vector<T>> &dp, const std::string &seq1, const std::string &seq2);
-
 // Reverse Complement Sequence
 //		And Complement is gonna be different functions... deal with it.
 std::string revcomp(const std::string &seq);

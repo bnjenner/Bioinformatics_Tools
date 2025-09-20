@@ -13,7 +13,7 @@ int main(int argc, const char **argv) {
 	std::string input = argv[1];
 	if (input == "-h" || input == "--help" || argc < 3) {
 		std::cerr << "Program:\n\tnw_align\n\n"
-				  << "Description:\n\tGreedy implementation of the Needleman Wunsch alignment algorithm.\n\n"
+				  << "Description:\n\tImplementation of the Needleman Wunsch alignment algorithm.\n\n"
 				  << "Usage:\n\tnw_align seq1.fasta seq2.fasta\n" << std::endl;
 		return 0;
 	}
