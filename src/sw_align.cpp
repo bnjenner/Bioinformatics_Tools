@@ -12,9 +12,9 @@ int main(int argc, const char **argv) {
 
 	std::string input = argv[1];
 	if (input == "-h" || input == "--help" || argc < 3) {
-		std::cerr << "Program:\n\tnw_align\n\n"
-				  << "Description:\n\tImplementation of the Needleman Wunsch global alignment algorithm.\n\n"
-				  << "Usage:\n\tnw_align seq1.fasta seq2.fasta\n" << std::endl;
+		std::cerr << "Program:\n\tsw_align\n\n"
+				  << "Description:\n\tImplementation of the Smith Waterman local alignment algorithm.\n\n"
+				  << "Usage:\n\tsw_align seq1.fasta seq2.fasta\n" << std::endl;
 		return 0;
 	}
 
@@ -37,7 +37,7 @@ int main(int argc, const char **argv) {
 	    Alignment aln(seq1, seq2);
 
 	    // Align and Print Alignments
-	    int score = aln.align("nw", "itr"); 
+	    int score = aln.align("sw", "itr"); 
 	    aln.print_alignment();
     } 
 	
