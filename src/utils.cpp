@@ -87,7 +87,7 @@ std::string translate(const std::string &seq, const int &orf = 0) {
 	for (int i = 0; i < (seq.length() - 2); i += 3) { 
 		
 		// This is so cursed 
-		codon = std::string(1, toupper(seq[i])) + std::string(1, toupper(seq[i + 2])) + std::string(1, toupper(seq[i + 2]));
+		codon = std::string(1, toupper(seq[i])) + std::string(1, toupper(seq[i + 1])) + std::string(1, toupper(seq[i + 2]));
 		peptide = CODON_MAP.at(codon);
 		
 		if (peptide == '*') { break; }
